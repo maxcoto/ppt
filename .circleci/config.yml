@@ -12,8 +12,6 @@ jobs:
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
 
-    working_directory: ~/ppt
-
     steps:
       - checkout
 
@@ -51,6 +49,4 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
-      - run: npm install
       - run: npm test
