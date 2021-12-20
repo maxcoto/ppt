@@ -1,0 +1,21 @@
+{
+  "name": "mintyou",
+  "engines": {
+    "node": "12.18.1"
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "nodemon -r dotenv/config index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer": "^13.0.0"
+  }
+}
