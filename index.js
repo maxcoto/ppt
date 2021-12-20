@@ -1,7 +1,13 @@
 const puppeteer = require('puppeteer');
 
 (async () => {
-  const browser = await puppeteer.launch({headless: true});
+  
+  const production = {
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
+  }
+  
+  const browser = await puppeteer.launch(production);
   const page = await browser.newPage();
   await page.goto('https://maxcoto.github.io/');
 
